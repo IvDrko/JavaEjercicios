@@ -12,7 +12,6 @@ public class Tienda {
         final String huevos;
         final String papel;
         final String sandias;
-        final String separador = "......";
         final String nombre;
 
         final double valor_habichuelas;
@@ -70,11 +69,11 @@ public class Tienda {
                 "    `-'                   '--------------------------'");
         //IMPRIMIR TABLA DE PRODUCTOS CON SUS PRECIOS
         System.out.println("Tabla de precios");
-        System.out.println(habichuelas+separador+valor_habichuelas+"€");
-        System.out.println(zanahorias+separador+valor_zanahorias+"€");
-        System.out.println(huevos+separador+valor_huevos+"€");
-        System.out.println(papel+separador+valor_papel+"€");
-        System.out.println(sandias+separador+valor_sandias+"€");
+        System.out.println(habichuelas+".........."+valor_habichuelas+"€");
+        System.out.println(zanahorias+"..........."+valor_zanahorias+"€");
+        System.out.println(huevos+"..............."+valor_huevos+"€");
+        System.out.println(papel+"......"+valor_papel+"€");
+        System.out.println(sandias+".............."+valor_sandias+"€");
 
         //PEDIR LA CANTIDAD QUE EL CLIENTE QUIERE COMPRAR DE CADA PRODUCTO
         System.out.println("Cantidad deseada de " + habichuelas);
@@ -106,7 +105,7 @@ public class Tienda {
         System.out.println("Sr/Sra "+nombre.substring(0,espacio_blanco)+" aquí tiene el resumen de la factura:");
         //MOSTRAR EL RESUMEN DE LA FACTURA
         //NOMBRE DEL CLIENTE
-        System.out.println("Nombre cliente: "+nombre);
+        System.out.println("Nombre cliente: "+nombre.toUpperCase());
         //CUANTO COMPRÓ DE CADA PRODUCTO
         System.out.println("Habichuelas: "+cantidad_habichuelas);
         System.out.println("Papel Higienico: "+cantidad_papel);
