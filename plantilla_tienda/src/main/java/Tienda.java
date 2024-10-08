@@ -36,7 +36,7 @@ public class Tienda {
         final double IVA = 21;
         //PRECIOS DE LOS PRODUCTOS NOMBRES DE LOS PRODUCTOS,ETC...
         //VARIABLES PARA EL DESCUENTO ALEATORIO
-        final double descuento = aleatorio.nextInt(6)+5;
+        final double descuento = aleatorio.nextDouble(6)+5;
         //=====================================================================
 
         //ASIGNAR EL NOMBRE DE LOS PRODUCTOS
