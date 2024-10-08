@@ -102,7 +102,7 @@ public class Tienda {
         //====================================================================
         //SR/SRA AQUI TIENE SU FACTURA
         espacio_blanco = nombre.indexOf(" ");
-        System.out.println("Sr/Sra "+nombre.substring(0,espacio_blanco)+" aquí tiene el resumen de la factura:");
+        System.out.println("Sr/Sra "+nombre.toUpperCase().charAt(0)+nombre.substring(1,espacio_blanco)+" aquí tiene el resumen de la factura:");
         //MOSTRAR EL RESUMEN DE LA FACTURA
         //NOMBRE DEL CLIENTE
         System.out.println("Nombre cliente: "+nombre.toUpperCase());
