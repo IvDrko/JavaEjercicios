@@ -4,10 +4,9 @@ public class Main {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         Scanner teclado = new Scanner(System.in);
-
         String usuario, password;
         System.out.println("Introduce usuario y contraseña");
-        usuario = teclado.nextLine().toLowerCase(); // remover toLowerCase?
+        usuario = teclado.nextLine().toLowerCase();
         password = teclado.nextLine().toLowerCase();
 
         if (usuario.equals("admin") && password.equals("1234"))
@@ -28,6 +27,7 @@ public class Main {
         }
 
         //Ejercicio 2
+        //Podria haberlo hecho con switch tambien.
         double producto;
         String tipo_cliente;
 
@@ -352,15 +352,109 @@ public class Main {
         {
             System.out.println("Introduce un valor valido para ambas instrucciones");
         }
-        // Ej8
-        /*int num_perfecto;
-        System.out.println("Introduce un numero");
-        num_perfecto = teclado.nextInt();
-        if(num_perfecto % 2 == 0)
+
+        // Ejercicio 9, ya que el 8 requiere de bucles
+        String operacion;
+        double num1,num2;
+        System.out.println("Introduce '+' para sumar, '-' para restar, '*' para multiplicar, y '/' para dividir, 'potencia' para potencias, 'raiz' para raices y 'factorial' para hacer factoriales");
+        operacion = teclado.nextLine();
+        switch (operacion)
         {
-            num_perfecto /=2;
+            case ("+"):
+                System.out.println("Introduce 1 numero");
+                num1 = teclado.nextDouble();
+                System.out.println("Introduce otro numero");
+                num2 = teclado.nextDouble();
+                System.out.println(num1+num2);
+                break;
+            case("-"):
+                System.out.println("Introduce un numero");
+                num1= teclado.nextDouble();
+                System.out.println("Introduce otro numero");
+                num2= teclado.nextDouble();
+                System.out.println(num1-num2);
+                break;
+            case("*"):
+                System.out.println("Introduce un numero");
+                num1= teclado.nextDouble();
+                System.out.println("Introduce otro numero");
+                num2= teclado.nextDouble();
+                System.out.println(num1*num2);
+                break;
+            case("/"):
+                System.out.println("Introduce un numero");
+                num1= teclado.nextDouble();
+                System.out.println("Introduce otro numero");
+                num2= teclado.nextDouble();
+                if(num2 == 0)
+                {
+                    System.out.println("No se puede dividir entre 0");
+                    break;
+                }
+                System.out.println(num1/num2);
+                break;
+            case("potencia"):
+                System.out.println("Introduce un numero");
+                num1= teclado.nextDouble();
+                System.out.println("Introduce otro numero");
+                num2= teclado.nextDouble();
+                if(num2 <0)
+                {
+                    System.out.println("El exponente no puede ser negativo");
+                    break;
+                }
+                System.out.println(Math.pow(num1, num2));
+                break;
+            case("raiz"):
+                System.out.println("Introduce un numero");
+                num1= teclado.nextDouble();
+                if(num1 < 0)
+                {
+                    System.out.println("No puedes hacer la raiz cuadrada de un numero negativo");
+                    break;
+                }
+                System.out.println(Math.sqrt(num1));
+                break;
+                // Aqui iria factorial, pero como se dieron bucles ni clases hasta este punto no lo voy a hacer.
+            default:
+                System.out.println("Introduce un caso válido la siguiente vez");
+                break;
         }
-        */
+
+        // Ejercicio 10
+        double cal1,cal2,cal3,cal4,cal5,cal6,sumacal;
+        int peso1,peso2,peso3,peso4,peso5,peso6,sumapesos;
+        System.out.println("Introduce 6 notas juntos con sus pesos ponderados(debe sumar 100%), (1º la nota, luego el peso)");
+        cal1= teclado.nextDouble();
+        peso1= teclado.nextInt();
+        cal2= teclado.nextDouble();
+        peso2= teclado.nextInt();
+        cal3= teclado.nextDouble();
+        peso3= teclado.nextInt();
+        cal4= teclado.nextDouble();
+        peso4= teclado.nextInt();
+        cal5= teclado.nextDouble();
+        peso5= teclado.nextInt();
+        cal6= teclado.nextDouble();
+        peso6= teclado.nextInt();
+        sumapesos=peso1+peso2+peso3+peso4+peso5+peso6;
+        if(sumapesos != 100)
+        {
+            System.out.println("La suma de los pesos no suman 100");
+        }
+        else
+        {
+            sumacal= (cal1*peso1 + cal2*peso2 + cal3*peso3 + cal4*peso4 + cal5*peso5+ cal6*peso6)/100;
+            System.out.println("Tu promedio es de "+sumacal);
+            if(sumacal < 60)
+            {
+                System.out.println("Has reprobado");
+            }
+            else
+            {
+                System.out.println("Has aprobado");
+            }
+        }
 
     }
 }
