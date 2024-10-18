@@ -352,8 +352,6 @@ public class Main {
         {
             System.out.println("Introduce un valor valido para ambas instrucciones");
         }
-<<<<<<< HEAD
-
         // Ejercicio 9, ya que el 8 requiere de bucles
         String operacion;
         double num1,num2;
@@ -456,8 +454,5 @@ public class Main {
                 System.out.println("Has aprobado");
             }
         }
-
-=======
->>>>>>> dbaf3f87289666018715bb646f82374a06397bb9
     }
 }
