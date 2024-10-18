@@ -352,15 +352,5 @@ public class Main {
         {
             System.out.println("Introduce un valor valido para ambas instrucciones");
         }
-        // Ej8
-        /*int num_perfecto;
-        System.out.println("Introduce un numero");
-        num_perfecto = teclado.nextInt();
-        if(num_perfecto % 2 == 0)
-        {
-            num_perfecto /=2;
-        }
-        */
-
     }
 }
