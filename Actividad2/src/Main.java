@@ -49,7 +49,7 @@ public class Main {
         System.out.println("Introduce la incognita");
         x = sc.nextDouble();
 
-        polinomio = x*x*x*x*x + 7*x*x*x*x - 4*x*x*x + 2*x*x - x + 10;
+        polinomio = x*x*x*x*x + 7*(x*x*x*x) - 4*(x*x*x) + 2*(x*x) - x + 10;
 
         System.out.println("El valor es: "+polinomio);
 

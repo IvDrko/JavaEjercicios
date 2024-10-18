@@ -36,7 +36,7 @@ public class Tienda {
         final double IVA = 21;
         //PRECIOS DE LOS PRODUCTOS NOMBRES DE LOS PRODUCTOS,ETC...
         //VARIABLES PARA EL DESCUENTO ALEATORIO
-        final double descuento = aleatorio.nextInt(6)+5;
+        final double descuento = aleatorio.nextDouble(6)+5;
         //=====================================================================
 
         //ASIGNAR EL NOMBRE DE LOS PRODUCTOS
@@ -102,7 +102,7 @@ public class Tienda {
         //====================================================================
         //SR/SRA AQUI TIENE SU FACTURA
         espacio_blanco = nombre.indexOf(" ");
-        System.out.println("Sr/Sra "+nombre.substring(0,espacio_blanco)+" aquí tiene el resumen de la factura:");
+        System.out.println("Sr/Sra "+nombre.toUpperCase().charAt(0)+nombre.substring(1,espacio_blanco)+" aquí tiene el resumen de la factura:");
         //MOSTRAR EL RESUMEN DE LA FACTURA
         //NOMBRE DEL CLIENTE
         System.out.println("Nombre cliente: "+nombre.toUpperCase());
@@ -125,9 +125,10 @@ public class Tienda {
         //DESCUENTO APLICADO
         System.out.println("Valor descontado: "+resultado_descuento+"€");
         //PRECIO FINAL
-        System.out.println("Total final: "+resultado_final+"€");
+        System.out.printf("Total final: %.2f ",resultado_final);
+        System.out.print("€"+"\n");
         //IMPRIMIR MENSAJE DE DESPEDIDA
-        System.out.println("Hasta luego "+nombre);
+        System.out.println("Hasta luego "+nombre.toUpperCase());
 
     }
 }
